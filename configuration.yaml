@@ -1,0 +1,85 @@
+homeassistant:
+  name: Home
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  elevation: 289
+  unit_system: imperial
+  time_zone: America/New_York
+  customize: !include customize.yaml
+  
+zone:
+  name: Home
+  latitude: !secret latitude_home
+  longitude: !secret longitude_home
+  radius: 200
+  icon: mdi:home
+ 
+zone 2:
+  name: Work
+  latitude: !secret latitude_work
+  longitude: !secret longitude_work
+  radius: 200
+  icon: mdi:work
+
+frontend:
+
+http:
+  api_password: !secret http_password
+  ssl_certificate: !secret ssl_certificate
+  ssl_key: !secret ssl_key
+  base_url: !secret base_url
+  trusted_networks:
+    - 192.168.1.0/24
+  ip_ban_enabled: True
+  login_attempts_threshold: 5
+
+updater:
+
+discovery:
+
+conversation:
+
+history:
+
+logbook:
+
+sun:
+
+# Text to speech
+tts:
+  platform: google
+  
+light:
+  platform: hue
+  host: 192.168.1.176
+
+nest:
+ client_id: !secret nest_client_id
+ client_secret: !secret nest_client_secret
+
+ifttt:
+ key: !secret ifttt_key
+
+remote:
+ - platform: harmony
+   name: Living Room
+   host: 192.168.1.213
+   
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home-assistant-1
+  keepalive: 60
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  protocol: 3.1
+
+device_tracker:
+ - platform: owntracks
+   max_gps_accuracy: 600
+   
+script: !include scripts.yaml
+#automation: !include automation.yaml
+group: !include groups.yaml
+sensor: !include sensor.yaml
+scene: !include scenes.yaml

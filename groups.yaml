@@ -1,0 +1,67 @@
+default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - sun.sun
+      - device_tracker.ryanpaulsen_marlin
+      - sensor.kitchen_thermostat_temperature
+      - sensor.dark_sky_temperature
+      - sensor.dark_sky_humidity
+      - sensor.dark_sky_nearest_storm_distance
+      - group.all_lights_2
+      - group.climate
+      - media_player.kitchen_home
+      - scene.relax
+      - scene.color_loop
+
+all_lights_2:
+   name: Lighting
+   entities:
+      - group.main_lights
+      - group.bedroom_lights
+      
+main_lights:
+   name: Main Lights
+   entities:
+      - light.living_room
+      - light.kitchen
+      
+bedroom_lights:
+   name: Bedroom
+   entities:
+      - light.bedroom
+
+climate:
+   name: Environmental Controls 
+   entities: 
+      - climate.kitchen
+      - binary_sensor.kitchen_thermostat_has_leaf
+      - sensor.kitchen_thermostat_humidity
+      - sensor.kitchen_thermostat_hvac_state
+
+kitchen:
+   name: Kitchen
+   view: yes
+   entities:
+      - light.kitchen
+      - media_player.kitchen_home
+      - scene.relax
+      - group.climate
+
+living_room:
+   name: Living Room
+   view: yes
+   entities:
+      - light.living_room
+      - media_player.living_room
+      - remote.living_room
+      - scene.relax
+      - scene.theater
+
+bedroom:
+   name: Bedroom
+   view: yes
+   entities:
+      - light.bedroom
+      - scene.bedtime
+      - media_player.bedroom

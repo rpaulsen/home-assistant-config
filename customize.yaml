@@ -1,0 +1,14 @@
+- entity_id: sensor.kitchen_thermostat_temperature
+  friendly_name: Inside
+
+- entity_id: sensor.dark_sky_temperature
+  friendly_name: Outside
+  
+- entity_id: sensor.dark_sky_humidity
+  friendly_name: Humidity
+  
+- entity_id: sensor.dark_sky_nearest_storm_distance
+  friendly_name: Storm
+
+- entity_id: sun.sun
+  friendly_name: Sun

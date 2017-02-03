@@ -1,0 +1,29 @@
+ - name: Relax
+   entities:
+      light.bedroom: off
+      light.main:
+         state: on
+         color_temp: 443
+         brightness: 144
+ - name: Bedtime
+   entities:
+      light.main: off
+      light.bedroom:
+         state: on
+         color_temp: 443
+         brightness: 60
+ - name: Color Loop
+   entities:
+      light.all:
+         state: on
+         effect: colorloop
+         xy_color: [0.33, 0.66]
+         brightness: 255
+ - name: Theater
+   entities:
+      light.bedroom: off
+      light.kitchen: off
+      light.living_room:
+         state: on
+         color_temp: 443
+         brightness: 20
