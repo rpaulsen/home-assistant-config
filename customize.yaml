@@ -12,3 +12,23 @@
 
 - entity_id: sun.sun
   friendly_name: Sun
+
+- entity_id: group.main_lights
+  emulated_hue: true
+  emulated_hue_name: "Main Lights"
+
+- entity_id: group.bedroom_lights
+  emulated_hue: true
+  emulated_hue_name: "Bedroom Lights"
+
+- entity_id: light.kitchen
+  emulated_hue: true
+  emulated_hue_name: "Kitchen Lights"
+
+- entity_id: light.living_room
+  emulated_hue: true
+  emulated_hue_name: "Living Room Lights"
+
+- entity_id: all_lights_2
+  emulated_hue: true
+  emulated_hue_name: "All Lights"  

@@ -80,7 +80,11 @@ device_tracker:
    
 emulated_hue:
   type: google_home
+  host_ip: 192.168.1.197
   listen_port: 80
+  expose_by_default: true
+  exposed_domains:
+     - scene
    
 script: !include scripts.yaml
 #automation: !include automation.yaml
