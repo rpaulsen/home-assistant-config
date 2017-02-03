@@ -78,6 +78,10 @@ device_tracker:
  - platform: owntracks
    max_gps_accuracy: 600
    
+emulated_hue:
+  type: google_home
+  listen_port: 80
+   
 script: !include scripts.yaml
 #automation: !include automation.yaml
 group: !include groups.yaml
