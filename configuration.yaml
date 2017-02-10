@@ -11,14 +11,14 @@ zone:
   name: Home
   latitude: !secret latitude_home
   longitude: !secret longitude_home
-  radius: 200
+  radius: 600
   icon: mdi:home
  
 zone 2:
   name: Work
   latitude: !secret latitude_work
   longitude: !secret longitude_work
-  radius: 200
+  radius: 600
   icon: mdi:work
 
 frontend:
@@ -56,9 +56,6 @@ light:
 nest:
  client_id: !secret nest_client_id
  client_secret: !secret nest_client_secret
-
-ifttt:
- key: !secret ifttt_key
 
 remote:
  - platform: harmony
