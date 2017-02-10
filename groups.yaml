@@ -53,6 +53,7 @@ living_room:
    view: yes
    entities:
       - light.living_room
+      - light.tv_backlight
       - media_player.living_room
       - remote.living_room
       - scene.relax
