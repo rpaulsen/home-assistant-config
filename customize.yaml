@@ -20,6 +20,10 @@
 - entity_id: group.bedroom_lights
   emulated_hue: true
   emulated_hue_name: "Bedroom Lights"
+  
+- entity_id: light.tv_backlight
+  emulated_hue: true
+  emulated_hue_name: "TV Backlight"
 
 - entity_id: light.kitchen
   emulated_hue: true

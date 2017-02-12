@@ -1,5 +1,6 @@
  - name: Relax
    entities:
+      light.tv_backlight: off
       light.bedroom: off
       light.main:
          state: on
@@ -7,6 +8,7 @@
          brightness: 144
  - name: Bedtime
    entities:
+      light.tv_backlight: off
       light.main: off
       light.bedroom:
          state: on
@@ -17,7 +19,8 @@
       light.all:
          state: on
          effect: colorloop
-         xy_color: [0.33, 0.66]
+         color_name: deeppink
+         sat: 254
          brightness: 200
  - name: Theater
    entities:
