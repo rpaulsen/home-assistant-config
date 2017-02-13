@@ -19,7 +19,7 @@
       light.all:
          state: on
          effect: colorloop
-         color_name: deeppink
+         xy_color: [0.33, 0.66]
          sat: 254
          brightness: 200
  - name: Theater
