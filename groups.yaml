@@ -12,6 +12,7 @@ default_view:
       - group.climate
       - media_player.kitchen_home
       - scene.relax
+      - scene.blue
       - scene.color_loop
 
 all_lights_2:
