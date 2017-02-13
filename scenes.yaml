@@ -18,7 +18,6 @@
    entities:
       light.all:
          state: on
-         effect: colorloop
          color_name: deeppink
          brightness: 200
  - name: Theater
