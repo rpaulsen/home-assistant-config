@@ -18,9 +18,9 @@
    entities:
       light.all:
          state: on
+         effect: colorloop
          rgb_color: [255,101,144]
          brightness: 200
-         effect: colorloop
  - name: Theater
    entities:
       light.bedroom: off
