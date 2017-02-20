@@ -8,6 +8,7 @@
          brightness: 144
  - name: Bedtime
    entities:
+      light.office: off
       light.tv_backlight: off
       light.main: off
       light.bedroom:
@@ -19,7 +20,13 @@
       light.all:
          state: on
          rgb_color: [0,0,255]
-         brightness: 200
+         brightness: 254
+ - name: Red
+   entities:
+      light.all:
+         state: on
+         rgb_color: [255,0,0]
+         brightness: 254
  - name: Color Loop
    entities:
       light.all:
@@ -27,6 +34,7 @@
          effect: colorloop
  - name: Theater
    entities:
+      light.office: off
       light.bedroom: off
       light.kitchen: off
       light.living_room:

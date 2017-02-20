@@ -19,7 +19,9 @@ all_lights_2:
    name: Lighting
    entities:
       - group.main_lights
-      - group.bedroom_lights
+      - light.bedroom
+      - light.tv_backlight
+      - light.office
       
 main_lights:
    name: Main Lights
@@ -45,6 +47,7 @@ kitchen:
    view: yes
    entities:
       - light.kitchen
+      - light.office
       - media_player.kitchen_home
       - scene.relax
       - group.climate

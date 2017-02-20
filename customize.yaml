@@ -43,3 +43,7 @@
 
 - entity_id: media_player.tv
   hidden: true
+
+- entity_id: light.office
+  emulated_hue: true
+  emulated_hue_name: "Office Lights"
