@@ -13,6 +13,7 @@ default_view:
       - media_player.kitchen_home
       - scene.relax
       - scene.blue
+      - scene.red
       - scene.color_loop
 
 all_lights_2:
