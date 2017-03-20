@@ -47,3 +47,6 @@ media_player.living_room:
 light.office:
   emulated_hue: true
   emulated_hue_name: "Office Lights"
+  
+sensor.since_last_boot_templated:
+  icon: mdi:access-time
