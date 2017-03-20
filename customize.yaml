@@ -1,49 +1,49 @@
-- entity_id: sensor.kitchen_thermostat_temperature
+sensor.kitchen_thermostat_temperature:
   friendly_name: Inside
 
-- entity_id: sensor.dark_sky_temperature
+sensor.dark_sky_temperature:
   friendly_name: Outside
   
-- entity_id: sensor.dark_sky_humidity
+sensor.dark_sky_humidity:
   friendly_name: Humidity
   
-- entity_id: sensor.dark_sky_nearest_storm_distance
+sensor.dark_sky_nearest_storm_distance:
   friendly_name: Storm
 
-- entity_id: sun.sun
+sun.sun:
   friendly_name: Sun
 
-- entity_id: group.main_lights
+group.main_lights:
   emulated_hue: true
   emulated_hue_name: "Main Lights"
 
-- entity_id: group.bedroom_lights
+group.bedroom_lights:
   emulated_hue: true
   emulated_hue_name: "Bedroom Lights"
   
-- entity_id: light.tv_backlight
+light.tv_backlight:
   emulated_hue: true
   emulated_hue_name: "TV Backlight"
 
-- entity_id: light.kitchen
+light.kitchen:
   emulated_hue: true
   emulated_hue_name: "Kitchen Lights"
 
-- entity_id: light.living_room
+light.living_room:
   emulated_hue: true
   emulated_hue_name: "Living Room Lights"
 
-- entity_id: all_lights_2
+all_lights_2:
   emulated_hue: true
-  emulated_hue_name: "All Lights"
+  emulated_hue_name: "The Lights"
   
-- entity_id: remote.living_room
+remote.living_room:
   emulated_hue: true
   emulated_hue_name: "TV"
 
-- entity_id: media_player.tv
+media_player.tv:
   hidden: true
 
-- entity_id: light.office
+light.office:
   emulated_hue: true
   emulated_hue_name: "Office Lights"
