@@ -49,4 +49,5 @@ light.office:
   emulated_hue_name: "Office Lights"
   
 sensor.since_last_boot_templated:
-  icon: mdi:access-time
+  friendly_name: "Since Last Boot"
+  icon: mdi:clock
