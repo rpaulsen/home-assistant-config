@@ -41,7 +41,7 @@ remote.living_room:
   emulated_hue: true
   emulated_hue_name: "TV"
 
-media_player.tv:
+media_player.living_room:
   hidden: true
 
 light.office:
