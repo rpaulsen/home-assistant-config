@@ -35,7 +35,7 @@ light.living_room:
 
 light.all:
   emulated_hue: true
-  emulated_hue_name: "All The Lights"
+  emulated_hue_name: "Apartment Lights"
   
 remote.living_room:
   emulated_hue: true

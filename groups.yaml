@@ -10,12 +10,21 @@ default_view:
       - sensor.dark_sky_nearest_storm_distance
       - group.all_lights_2
       - group.climate
+      - group.system
       - media_player.kitchen_home
-      - scene.relax
+      - scene.normal_lighting
       - scene.blue
       - scene.red
       - scene.color_loop
       - scene.random
+
+system:
+   entities:
+      - sensor.speedtest_download
+      - sensor.speedtest_upload
+      - sensor.speedtest_ping
+      - sensor.systemmonitor_since_last_boot
+      - sensor.systemmonitor_load_15m
 
 all_lights_2:
    name: Lighting
@@ -46,7 +55,7 @@ kitchen:
       - light.kitchen
       - light.office
       - media_player.kitchen_home
-      - scene.relax
+      - scene.normal_lighting
       - group.climate
 
 living_room:
@@ -57,7 +66,7 @@ living_room:
       - light.tv_backlight
       - media_player.tv
       - remote.living_room
-      - scene.relax
+      - scene.normal_lighting
       - scene.theater
 
 bedroom:

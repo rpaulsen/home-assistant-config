@@ -1,4 +1,4 @@
- - name: Relax
+ - name: Normal Lighting
    entities:
       light.tv_backlight: off
       light.bedroom: off
