@@ -40,8 +40,18 @@ discovery:
 conversation:
 
 history:
+ exclude:
+  entities:
+   - sensor.since_last_boot
+   - sensor.since_last_boot_templated
+   - sensor.cpu_use
 
 logbook:
+ exclude:
+  entities:
+   - sensor.since_last_boot
+   - sensor.since_last_boot_templated
+   - sensor.cpu_use
 
 sun:
 
