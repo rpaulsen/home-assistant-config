@@ -7,7 +7,7 @@
          state: on
          color_temp: 443
          brightness: 254
- - name: Bedtime
+ - name: Bedtime Lighting
    entities:
       light.office: off
       light.tv_backlight: off
@@ -16,13 +16,13 @@
          state: on
          color_temp: 443
          brightness: 60
- - name: Blue
+ - name: Blue Lighting
    entities:
       light.all:
          state: on
          rgb_color: [0,0,255]
          brightness: 254
- - name: Red
+ - name: Red Lighting
    entities:
       light.all:
          state: on
@@ -33,12 +33,12 @@
       light.all:
          state: on
          effect: colorloop
- - name: Random
+ - name: Random Color
    entities:
       light.all:
          state: on
          effect: random
- - name: Theater
+ - name: Theater Lighting
    entities:
       light.office: off
       light.bedroom: off
