@@ -15,6 +15,7 @@ default_view:
       - scene.blue
       - scene.red
       - scene.color_loop
+      - scene.random
 
 all_lights_2:
    name: Lighting
@@ -29,11 +30,6 @@ main_lights:
    entities:
       - light.living_room
       - light.kitchen
-      
-bedroom_lights:
-   name: Bedroom
-   entities:
-      - light.bedroom
 
 climate:
    name: Environmental Controls 

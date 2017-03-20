@@ -13,11 +13,11 @@ sensor.dark_sky_nearest_storm_distance:
 sun.sun:
   friendly_name: Sun
 
-group.main_lights:
+light.main:
   emulated_hue: true
   emulated_hue_name: "Main Lights"
 
-group.bedroom_lights:
+light.bedroom:
   emulated_hue: true
   emulated_hue_name: "Bedroom Lights"
   
@@ -33,9 +33,9 @@ light.living_room:
   emulated_hue: true
   emulated_hue_name: "Living Room Lights"
 
-group.all_lights_2:
+light.all:
   emulated_hue: true
-  emulated_hue_name: "The Lights"
+  emulated_hue_name: "All The Lights"
   
 remote.living_room:
   emulated_hue: true

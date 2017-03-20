@@ -2,10 +2,11 @@
    entities:
       light.tv_backlight: off
       light.bedroom: off
+      light.office: off
       light.main:
          state: on
          color_temp: 443
-         brightness: 144
+         brightness: 254
  - name: Bedtime
    entities:
       light.office: off
@@ -32,6 +33,11 @@
       light.all:
          state: on
          effect: colorloop
+ - name: Random
+   entities:
+      light.all:
+         state: on
+         effect: random
  - name: Theater
    entities:
       light.office: off
