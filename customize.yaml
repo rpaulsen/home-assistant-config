@@ -33,7 +33,7 @@ light.living_room:
   emulated_hue: true
   emulated_hue_name: "Living Room Lights"
 
-all_lights_2:
+group.all_lights_2:
   emulated_hue: true
   emulated_hue_name: "The Lights"
   
