@@ -1,15 +1,7 @@
-  - platform: speedtest
-    hour:
-      - 0
-      - 12
-    monitored_conditions:
-      - ping
-      - download
-      - upload
   - platform: systemmonitor
     resources: 
       - type: since_last_boot
-      - type: load_15m
+      - type: processor_use
   - platform: darksky
     api_key: !secret dark_sky_api
     monitored_conditions:
