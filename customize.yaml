@@ -36,10 +36,6 @@ light.living_room:
 light.all:
   emulated_hue: true
   emulated_hue_name: "Apartment Lights"
-  
-remote.living_room:
-  emulated_hue: true
-  emulated_hue_name: "TV"
 
 media_player.living_room:
   hidden: true

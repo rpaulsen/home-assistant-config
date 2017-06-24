@@ -10,19 +10,12 @@ default_view:
       - sensor.dark_sky_nearest_storm_distance
       - group.all_lights_2
       - group.climate
-      - group.system
       - media_player.kitchen_home
       - scene.normal_lighting
       - scene.blue_lighting
       - scene.red_lighting
       - scene.color_loop
       - scene.random_color
-
-system:
-   name: System
-   entities:
-      - sensor.since_last_boot_templated
-      - sensor.cpu_use
 
 all_lights_2:
    name: Lighting
