@@ -8,11 +8,12 @@
   condition:
     condition: or
     conditions:
-      - condition: state
-        entity_id: 'device_tracker.ryan_pixel'
-        state: 'home'
-        
+      - condition: template
+        value_template: '{{is_state("device_tracker.ryan_pixel", "home") and as_timestamp(now()) - as_timestamp(states.device_tracker.ryan_pixel.last_changed) < 1800}}'
+      - condition: template
+        value_template: '{{ not is_state("device_tracker.ryan_pixel", "home")}}'  
   action:
+    - delay: 00:00:05
     - service: tts.amazon_polly_say
       data:
         entity_id: media_player.kitchen_home
@@ -117,6 +118,14 @@
   trigger:
     - platform: time
       at: '08:00:00'
+  condition:
+    condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
   action:
     - service: media_player.play_media
       data:
