@@ -1,0 +1,20 @@
+- platform: wunderground
+  api_key: !secret wunderground_api_key
+  monitored_conditions:
+    - alerts
+    - weather_1d
+    - precip_1d
+    - weather
+    - wind_mph
+    - temp_f
+    - feelslike_f
+    - weather_1h
+- platform: template
+  sensors:
+    harmony_activity:
+      friendly_name: 'Current Activity'
+      value_template: '{{ states.remote.living_room.attributes.current_activity }}'
+    front_door_batt:
+      friendly_name: 'Front Door'
+      value_template: '{{ states.lock.front_door.attributes.battery_level }}'
+      unit_of_measurement: '%'

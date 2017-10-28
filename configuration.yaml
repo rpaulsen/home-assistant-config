@@ -23,6 +23,10 @@ zone 2:
 
 frontend:
 
+config:
+  
+map:
+
 http:
   api_password: !secret http_password
   ssl_certificate: !secret ssl_certificate
@@ -36,28 +40,23 @@ http:
 updater:
 
 discovery:
+  ignore:
+    - samsung_tv
 
-conversation:
+#conversation:
 
 history:
- exclude:
-  entities:
-   - sensor.since_last_boot
-   - sensor.since_last_boot_templated
-   - sensor.cpu_use
 
 logbook:
- exclude:
-  entities:
-   - sensor.since_last_boot
-   - sensor.since_last_boot_templated
-   - sensor.cpu_use
 
 sun:
 
 # Text to speech
 tts:
-  platform: google
+  - platform: amazon_polly
+    aws_access_key_id: !secret poly_aws_access_key_id
+    aws_secret_access_key: !secret poly_aws_secret_access_key
+    voice: Brian
   
 light:
   platform: hue
@@ -70,38 +69,24 @@ nest:
 remote:
  - platform: harmony
    name: Living Room
-   host: 192.168.1.213
    activity: 22853421
    
-mqtt:
-  broker: 127.0.0.1
-  port: 1883
-  client_id: home-assistant-1
-  keepalive: 60
-  username: !secret mqtt_username
-  password: !secret mqtt_password
-  protocol: 3.1
-
 device_tracker:
- - platform: owntracks
+ - platform: owntracks_http
    max_gps_accuracy: 600
    
-emulated_hue:
-  type: google_home
-  host_ip: 192.168.1.197
-  listen_port: 80
-  expose_by_default: true
-  off_maps_to_on_domains:
+google_assistant:
+  project_id: !secret google_assistant_project_id
+  client_id: !secret google_assistant_client_id
+  access_token: !secret google_assistant_access_token
   exposed_domains:
      - scene
 
-device_sun_light_trigger:
-  light_group: group.main_lights
-  light_profile: relax
-  device_group: group.all_devices
-   
-script: !include scripts.yaml
-#automation: !include automation.yaml
+wink:
+
 group: !include groups.yaml
-sensor: !include sensor.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
 scene: !include scenes.yaml
+sensor: !include sensors.yaml
+input_select: !include input_select.yaml

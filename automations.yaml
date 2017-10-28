@@ -1,0 +1,125 @@
+- alias: 'Welcome Home'
+  id: '1508212445583'
+  trigger:
+    entity_id: lock.front_door
+    from: locked
+    platform: state
+    to: unlocked
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: 'device_tracker.ryan_pixel'
+        state: 'home'
+        
+  action:
+    - service: tts.amazon_polly_say
+      data:
+        entity_id: media_player.kitchen_home
+        message: "Welcome home! I've turned the lights on for you and returned the environmental controls to normal."
+    - condition: numeric_state
+      below: '-2.5'
+      entity_id: sun.sun
+      value_template: '{{ state.attributes.elevation }}'
+    - service: scene.turn_on
+      data:
+        entity_id: scene.normal_lighting
+
+- alias: Harmony
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: input_select.harmony
+    from: 'Select Activity'
+  action:
+  - service: remote.turn_on
+    entity_id: remote.living_room
+    data_template:
+      activity: >
+        {% if is_state("input_select.harmony", "Watch TV") %}
+          22853421
+        {% elif is_state("input_select.harmony", "Play Xbox 360") %}
+          28993774
+        {% elif is_state("input_select.harmony", "Play PS4") %}
+          28993836
+        {% elif is_state("input_select.harmony", "Play Switch") %}
+          28993872
+        {% else %}
+        {% endif %}
+  - service: input_select.select_option
+    entity_id: input_select.harmony
+    data_template:
+      option: "Select Activity"
+      
+- alias: Harmony Off
+  hide_entity: True
+  trigger:
+  - platform: state
+    entity_id: input_select.harmony
+    to: 'Power Off'
+  action:
+  - service: remote.turn_off
+    entity_id: remote.living_room
+  - service: input_select.select_option
+    entity_id: input_select.harmony
+    data_template:
+      option: "Select Activity"
+      
+- alias: STOP Streaming Radio on CHROMECAST
+  trigger:
+    - platform: state
+      entity_id: input_select.radio_station
+      to: "None"
+  action:
+    service: media_player.turn_off
+    data_template:
+      entity_id: >
+          {% if is_state("input_select.radio_player", "Living Room") %}
+            media_player.tv
+          {%-elif is_state("input_select.radio_player", "Kitchen") %}
+            media_player.kitchen_home
+          {%-elif is_state("input_select.radio_player", "Bedroom") %}
+            media_player.bedroom_speaker
+          {% else %}
+            "None"
+          {% endif %}
+
+- alias: START Streaming Radio on CHROMECAST
+  trigger:
+    - platform: state
+      entity_id: input_select.radio_station
+  action:
+    - service: media_player.play_media
+      data_template:
+        entity_id: >
+          {% if is_state("input_select.radio_player", "Living Room") %}
+            media_player.tv
+          {%-elif is_state("input_select.radio_player", "Kitchen") %}
+            media_player.kitchen_home
+          {%-elif is_state("input_select.radio_player", "Bedroom") %}
+            media_player.bedroom_speaker
+          {% else %}
+            "None"
+          {% endif %}
+        media_content_id: >
+          {% if is_state("input_select.radio_station", "90.1 - WABE") %}
+            http://pba-ice.streamguys.org/wabe
+          {%-elif is_state("input_select.radio_station", "94.1 - Star 94") %}
+            https://prod-23-22-55-197.wostreaming.net/entercom-wstrfmaac-ibc1
+          {%-elif is_state("input_select.radio_station", "99.7 - Q100") %}
+            http://18763.live.streamtheworld.com/WWWQFMAAC.aac
+          {% else %}
+            "None"
+          {% endif %}
+        media_content_type: 'audio/aac'
+        
+- alias: Morning Alarm
+  trigger:
+    - platform: time
+      at: '08:00:00'
+  action:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.bedroom_speaker
+        media_content_id: http://18763.live.streamtheworld.com/WWWQFMAAC.aac
+        media_content_type: 'audio/aac'

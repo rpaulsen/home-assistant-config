@@ -1,0 +1,30 @@
+harmony:
+  name: Select Activity
+  options:
+    - Select Activity
+    - Watch TV
+    - Play Xbox 360
+    - Play PS4
+    - Play Switch
+    - Power Off
+  icon: mdi:remote
+  
+radio_station:
+  name: Radio Station
+  options:
+    - "90.1 - WABE"
+    - "94.1 - Star 94"
+    - "99.7 - Q100"
+    - "None"
+  initial: "None"
+  icon: mdi:radio
+  
+radio_player:
+  name: Radio Player
+  options:
+    - Living Room 
+    - Kitchen 
+    - Bedroom
+    - "None"
+  initial: "None"
+  icon: mdi:airplay
