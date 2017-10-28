@@ -13,6 +13,7 @@ deps
 tts
 secrets.yaml
 known_devices.yaml
+ip_bans.yaml
 *.conf
 plex.conf
 phue.conf
