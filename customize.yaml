@@ -2,3 +2,5 @@ sensor.harmony_activity:
   icon: 'mdi:monitor'
 sensor.front_door_batt:
   icon: mdi:battery
+lock.front_door_locked:
+  friendly_name: 'Front Door'
