@@ -80,7 +80,8 @@ google_assistant:
   exposed_domains:
      - scene
 
-wink:
+zwave:
+  usb_path: /dev/ttyACM0
 
 group: !include groups.yaml
 automation: !include automations.yaml
