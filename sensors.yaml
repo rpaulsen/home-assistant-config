@@ -16,5 +16,5 @@
       value_template: '{{ states.remote.living_room.attributes.current_activity }}'
     front_door_batt:
       friendly_name: 'Front Door'
-      value_template: '{{ states.lock.front_door.attributes.battery_level }}'
+      value_template: '{{ states.zwave.front_door.attributes.battery_level }}'
       unit_of_measurement: '%'
