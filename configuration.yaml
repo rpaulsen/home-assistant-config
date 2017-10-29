@@ -82,6 +82,7 @@ google_assistant:
 
 zwave:
   usb_path: /dev/ttyACM0
+  network_key: !secret zwave_key
 
 group: !include groups.yaml
 automation: !include automations.yaml
