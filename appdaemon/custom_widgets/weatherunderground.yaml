@@ -1,0 +1,22 @@
+widget_type: baseweatherunderground
+fields:
+  title: ""
+  unit: ""
+  pws_temp_f: ""
+  pws_relative_humidity: ""
+  pws_precip_1d: ""
+  pws_precip_1d_in: ""
+  pws_wind_mph: ""
+  pws_pressure_in: ""
+  pws_wind_dir: ""
+  pws_feelslike_f: ""
+  pws_weather: ""
+css: []
+static_css:
+  title_style: $weather_sub_style
+  unit_style: $weather_unit_style
+  main_style: $weather_main_style
+  sub_style: $weather_sub_style
+  widget_style: $weather_widget_style
+icons: []
+static_icons: []

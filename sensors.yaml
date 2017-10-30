@@ -4,11 +4,15 @@
     - alerts
     - weather_1d
     - precip_1d
+    - precip_1d_in
     - weather
     - wind_mph
+    - wind_dir
     - temp_f
     - feelslike_f
     - weather_1h
+    - relative_humidity
+    - pressure_in
 - platform: template
   sensors:
     harmony_activity:

@@ -2,9 +2,70 @@
 # Main arguments, all optional
 #
 title: Ryan's Apartment
-widget_dimensions: [120, 120]
-widget_margins: [5, 5]
-columns: 8
+widget_dimensions: [124, 148]
+widget_margins: [8, 9]
+columns: 6
+
+ryan_presence:
+  widget_type: device_tracker
+  title: Ryan
+  device: ryan_pixel
+  icon_on: fa-male
+  icon_off: fa-male
+  
+living_room_lights:
+  widget_type: light
+  entity: light.living_room
+  title: Living Room
+  icon_on: mdi-lightbulb
+  icon_off: mdi-lightbulb-outline
+  on_attributes:
+    color_temp: 443
+    brightness: 254
+    
+kitchen_lights:
+  widget_type: light
+  entity: light.kitchen
+  title: Kitchen
+  icon_on: mdi-lightbulb
+  icon_off: mdi-lightbulb-outline
+  on_attributes:
+    color_temp: 443
+    brightness: 254
+    
+bedroom_lights:
+  widget_type: light
+  entity: light.bedroom
+  title: Bedroom
+  icon_on: mdi-lightbulb
+  icon_off: mdi-lightbulb-outline
+  on_attributes:
+    color_temp: 443
+    brightness: 254
+        
+office_lights:
+  widget_type: light
+  entity: light.office
+  title: Office
+  icon_on: mdi-lightbulb
+  icon_off: mdi-lightbulb-outline
+  on_attributes:
+    color_temp: 443
+    brightness: 254
+    
+fan:
+  widget_type: binary_sensor
+  entity: binary_sensor.kitchen_thermostat_fan
+  title: Nest Fan
+  icon_on: mdi-fan
+  icon_off: mdi-fan
+  
+nest:
+  widget_type: climate
+  entity: climate.kitchen
+  title: Nest
     
 layout:
-    - group.weather
+    - clock.clock(2x1), weatherunderground.weatherunderground(2x2), nest, fan
+    - living_room_lights, kitchen_lights, lock.front_door_locked, ryan_presence
+    - office_lights, bedroom_lights, scene.normal_lighting, scene.theater_lighting, scene.color_loop, scene.random_color
