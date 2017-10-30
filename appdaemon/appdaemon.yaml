@@ -1,17 +1,16 @@
 AppDaemon:
-  cert_verify: False
-  disable_apps: 1
   logfile: STDOUT
   errorfile: STDERR
   threads: 10
-  app_dir: /config/hadaemon/apps
+  app_dir: /config/appdaemon/apps
 HASS:
   ha_url: !secret base_url
   ha_key: !secret http_password
 HADashboard:
-  dash_url: http://192.168.1.197
-  dash_dir: /config/hadaemon/dashboards
+  dash_url: http://192.168.1.197:5050
+  dash_dir: /config/appdaemon/dashboards
 
+# Apps
 hello_world:
   module: hello
   class: HelloWorld
