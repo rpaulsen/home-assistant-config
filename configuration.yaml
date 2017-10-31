@@ -11,12 +11,14 @@ zone:
   name: Home
   latitude: !secret latitude_home
   longitude: !secret longitude_home
+  radius: 400
   icon: mdi:home
  
 zone 2:
   name: Work
   latitude: !secret latitude_work
   longitude: !secret longitude_work
+  radius: 400
   icon: mdi:work
 
 frontend:
