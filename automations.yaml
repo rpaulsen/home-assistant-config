@@ -131,7 +131,7 @@
         entity_id: media_player.bedroom_speaker
         media_content_id: http://18763.live.streamtheworld.com/WWWQFMAAC.aac
         media_content_type: 'audio/aac'
-    - service: media_player.play_media
+    - service: media_player.volume_set
       data:
         entity_id: media_player.bedroom_speaker
         volume_level: 0.7
