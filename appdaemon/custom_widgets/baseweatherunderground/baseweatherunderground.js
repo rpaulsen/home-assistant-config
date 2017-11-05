@@ -86,12 +86,13 @@ function baseweatherunderground(widget_id, url, skin, parameters)
         {"entity": "sensor.pws_temp_f", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
         {"entity": "sensor.pws_relative_humidity", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
         {"entity": "sensor.pws_precip_1d", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
-        {"entity": "sensor.pws_precip_1d_in", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
-        {"entity": "sensor.pws_wind_mph", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
-        {"entity": "sensor.pws_pressure_in", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
-        {"entity": "sensor.pws_wind_dir", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
-        {"entity": "sensor.pws_feelslike_f", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
-        {"entity": "sensor.pws_weather", "initial": self.OnStateAvailable, "update": self.OnStateUpdate}
+        {"entity": "sensor.pws_precip_2d", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
+        {"entity": "sensor.pws_weather", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
+        {"entity": "sensor.pws_weather_2d", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
+        {"entity": "sensor.pws_temp_high_1d_f", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
+        {"entity": "sensor.pws_temp_high_2d_f", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
+        {"entity": "sensor.pws_temp_low_1d_f", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
+        {"entity": "sensor.pws_temp_low_2d_f", "initial": self.OnStateAvailable, "update": self.OnStateUpdate},
     ];
 
     // Finally, call the parent constructor to get things moving
@@ -128,6 +129,13 @@ function baseweatherunderground(widget_id, url, skin, parameters)
             var icon = state.attributes.entity_picture.split('/').pop().split('.')[0];
             
             self.set_field(self, "pws_weather", self.weather_icons[icon])
+        }
+        else if (state.entity_id == "sensor.pws_weather_2d")
+        {
+          
+            var icon = state.attributes.entity_picture.split('/').pop().split('.')[0];
+            
+            self.set_field(self, "pws_weather_2d", self.weather_icons[icon])
         }
         else
         {

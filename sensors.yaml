@@ -3,16 +3,19 @@
   monitored_conditions:
     - alerts
     - weather_1d
+    - weather_2d
     - precip_1d
-    - precip_1d_in
+    - precip_2d
     - weather
     - wind_mph
-    - wind_dir
     - temp_f
     - feelslike_f
     - weather_1h
     - relative_humidity
-    - pressure_in
+    - temp_high_1d_f
+    - temp_high_2d_f
+    - temp_low_1d_f
+    - temp_low_2d_f
 - platform: template
   sensors:
     harmony_activity:

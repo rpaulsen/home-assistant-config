@@ -5,15 +5,16 @@ fields:
   pws_temp_f: ""
   pws_relative_humidity: ""
   pws_precip_1d: ""
-  pws_precip_1d_in: ""
-  pws_wind_mph: ""
-  pws_pressure_in: ""
-  pws_wind_dir: ""
-  pws_feelslike_f: ""
+  pws_precip_2d: ""
   pws_weather: ""
+  pws_weather_2d: ""
+  pws_temp_high_1d_f: ""
+  pws_temp_high_2d_f: ""
+  pws_temp_low_1d_f: ""
+  pws_temp_low_2d_f: ""
 css: []
 static_css:
-  title_style: $weather_sub_style
+  title_style: $style_title
   unit_style: $weather_unit_style
   main_style: $weather_main_style
   sub_style: $weather_sub_style

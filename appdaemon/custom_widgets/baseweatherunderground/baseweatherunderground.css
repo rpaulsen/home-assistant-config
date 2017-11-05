@@ -1,10 +1,4 @@
-.widget-baseweatherunderground-{{id}} {
-	color: white;
-}
 
-.widget-baseweatherunderground-{{id}} h1 {
-	margin-bottom: 0px;
-}
 
 .widget-baseweatherunderground-{{id}} [class^="primary"] {
 	display: inline-block;

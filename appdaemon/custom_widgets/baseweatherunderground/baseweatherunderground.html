@@ -1,33 +1,48 @@
-<h1 class="title" data-bind="text: title, attr:{style: title_style}"></h1>
+<h1 class="title" data-bind="attr: {style: title_style}">Today</h1>
 <div data-bind="attr: {style: main_style}">
+	
 	<p class="primary-climacon" data-bind="html: pws_weather"></p>
 	<p class="primary-info" data-bind="text: pws_temp_f"></p>
 	<p class="primary-unit" data-bind="html: unit, attr: {style: unit_style}"></p>
-<br>
+	
+	<br>
+
+	<p class="secondary-info colored" data-bind="text: pws_temp_high_1d_f"></p>
+	<p class="secondary-info colored">&deg;</p>
+	<p class="secondary-info colored">/</p>
+	<p class="secondary-info colored" data-bind="text: pws_temp_low_1d_f"></p>
+	<p class="secondary-info colored">&deg;</p>
+
+	<p class="secondary-icon colored">&#xe045</p>
+	<p class="secondary-info colored">&nbsp;</p>
+	<p class="secondary-info colored" data-bind="text: pws_precip_1d"></p>
+	<p class="secondary-info colored">%</p>
+
+	<p class="secondary-icon colored">&#xe041</p>
+	<p class="secondary-info colored">&nbsp;</p>
+	<p class="secondary-info colored" data-bind="text: pws_relative_humidity"></p>
+	<p class="secondary-info colored">%</p>
+	
+</div>
+
+<hr/>
+
+<h1 class="title" data-bind="attr: {style: title_style}">Tomorrow</h1>
+
 <div data-bind="attr: {style: sub_style}">
-	<p class="secondary-info">Humidity:&nbsp;</p>
-	<p class="secondary-info" data-bind="text: pws_relative_humidity"></p>
-	<p class="secondary-info">%</p>
-	<br>
-	<p class="secondary-info">Apparent Temp:&nbsp;</p>
-	<p class="secondary-info" data-bind="html: pws_feelslike_f"></p>
-	<p class="secondary-info" data-bind="html: unit"></p>
-	<br>
-	<p class="secondary-info">Rain:&nbsp;</p>
-	<p class="secondary-info" data-bind="text: pws_precip_1d"></p>
-	<p class="secondary-info">&nbsp;%</p>
-	<p class="secondary-info">&nbsp;/&nbsp;</p>
-	<p class="secondary-info" data-bind="text: pws_precip_1d_in"></p>
-	<p class="secondary-info">in</p>
-	<br>
-	<p class="secondary-info">Wind:&nbsp;</p>
-	<p class="secondary-info" data-bind="text: pws_wind_mph"></p>
-	<p class="secondary-info">&nbsp;Mph</p>
-	<p class="secondary-info">&nbsp;/&nbsp;</p>
-	<p class="secondary-info" data-bind="html: pws_wind_dir"></p>
-	<p class="secondary-info">&nbsp;&deg;</p>
-	<br>
-	<p class="secondary-info">Pressure:&nbsp;</p>
-	<p class="secondary-info" data-bind="text: pws_pressure_in"></p>
-	<p class="secondary-info">&nbsp;in</p>
+	
+	<p class="secondary-climacon" data-bind="html: pws_weather_2d"></p>
+	
+	<p class="secondary-info colored" data-bind="text: pws_temp_high_2d_f"></p>
+	<p class="secondary-info colored">&deg;</p>
+	<p class="secondary-info colored">/</p>
+	<p class="secondary-info colored" data-bind="text: pws_temp_low_2d_f"></p>
+	<p class="secondary-info colored">&deg;</p>
+	
+	<p class="secondary-icon colored">&#xe045</p>
+	<p class="secondary-info colored">&nbsp;</p>
+	<p class="secondary-info colored" data-bind="text: pws_precip_2d"></p>
+	<p class="secondary-info colored">%</p>
+	
+	
 </div>
