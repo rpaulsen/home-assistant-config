@@ -2,8 +2,8 @@
 # Main arguments, all optional
 #
 title: Ryan's Apartment
-widget_dimensions: [124, 148]
-widget_margins: [8, 9]
+widget_dimensions: [128.67, 115]
+widget_margins: [4, 4]
 columns: 6
 
 ryan_presence:

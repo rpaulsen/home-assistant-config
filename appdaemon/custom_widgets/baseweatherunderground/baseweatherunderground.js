@@ -137,6 +137,11 @@ function baseweatherunderground(widget_id, url, skin, parameters)
             
             self.set_field(self, "pws_weather_2d", self.weather_icons[icon])
         }
+        else if (state.entity_id == "sensor.pws_temp_f")
+        {
+          
+            self.set_field(self, "pws_temp_f", Math.round(state.state))
+        }
         else
         {
             var field = state.entity_id.split(".")[1];
