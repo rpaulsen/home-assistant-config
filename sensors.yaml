@@ -25,3 +25,16 @@
       friendly_name: 'Front Door'
       value_template: '{{ states.zwave.front_door.attributes.battery_level }}'
       unit_of_measurement: '%'
+    weekday_alarm_time:
+      friendly_name: 'Weekday Alarm Time'
+      value_template: '{{ "%0.02d:%0.02d" | format(states.input_datetime.weekday_alarm_time.attributes.hour | int, states.input_datetime.weekday_alarm_time.attributes.minute | int) }}'
+    weekend_alarm_time: 
+      friendly_name: 'Weekend Alarm Time'
+      value_template: '{{ "%0.02d:%0.02d" | format(states.input_datetime.weekend_alarm_time.attributes.hour | int, states.input_datetime.weekend_alarm_time.attributes.minute | int) }}'
+- platform: time_date
+  display_options:
+    - 'time'
+    - 'date'
+    - 'date_time'
+    - 'time_date'
+    - 'time_utc'

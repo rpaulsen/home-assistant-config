@@ -32,6 +32,7 @@ all_lights_2:
       - light.bedroom
       - light.tv_backlight
       - light.office
+      - light.hallway
       
 main_lights:
    name: Main Lights
@@ -100,3 +101,17 @@ bedroom:
       - scene.bedtime_lighting
       - media_player.bedroom
       - media_player.bedroom_speaker
+      - group.weekday_alarm
+      - group.weekend_alarm
+
+weekday_alarm:
+  name: Weekday Alarm
+  entities:
+    - automation.weekday_alarm
+    - input_datetime.weekday_alarm_time
+      
+weekend_alarm:
+  name: Weekend Alarm
+  entities:
+    - automation.weekend_alarm
+    - input_datetime.weekend_alarm_time    

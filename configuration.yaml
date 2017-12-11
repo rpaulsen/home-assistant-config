@@ -48,6 +48,30 @@ history:
 logbook:
 
 sun:
+  
+recorder:
+  purge_interval: 2
+  purge_keep_days: 5
+  exclude:
+    domains:
+      - automation
+      - weblink
+      - updater
+      - zwave
+    entities:
+      - sun.sun
+      - sensor.date
+      - sensor.time
+      - sensor.date__time
+      - sensor.time__date
+      - sensor.time_utc
+      - sensor.pws_alerts
+      - sensor.pws_weather
+      - sensor.pws_weather_1d
+      - sensor.pws_weather_1h
+      - sensor.pws_weather_2d
+      - sensor.weekday_alarm_time
+      - sensor.weekend_alarm_time
 
 # Text to speech
 tts:
@@ -77,8 +101,11 @@ google_assistant:
   project_id: !secret google_assistant_project_id
   client_id: !secret google_assistant_client_id
   access_token: !secret google_assistant_access_token
+  agent_user_id: !secret google_assistant_agent_user_id
+  api_key: !secret google_assistant_api_key
   exposed_domains:
      - scene
+     - script
 
 zwave:
   usb_path: /dev/ttyACM0
@@ -90,3 +117,4 @@ script: !include scripts.yaml
 scene: !include scenes.yaml
 sensor: !include sensors.yaml
 input_select: !include input_select.yaml
+input_datetime: !include input_datetime.yaml

@@ -15,6 +15,7 @@ radio_station:
     - "90.1 - WABE"
     - "94.1 - Star 94"
     - "99.7 - Q100"
+    - "ESPN"
     - "None"
   initial: "None"
   icon: mdi:radio
@@ -25,6 +26,7 @@ radio_player:
     - Living Room 
     - Kitchen 
     - Bedroom
+    - All
     - "None"
   initial: "None"
   icon: mdi:airplay

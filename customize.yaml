@@ -4,3 +4,5 @@ sensor.front_door_batt:
   icon: mdi:battery
 lock.front_door_locked:
   friendly_name: 'Front Door'
+scripts.lock_door:
+  google_assistant_name: 'Door Lock'

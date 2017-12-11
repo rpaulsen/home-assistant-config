@@ -1,0 +1,11 @@
+weekday_alarm_time:
+  name: Weekday Alarm Time
+  has_date: false
+  has_time: true
+  initial: '08:00'
+
+weekend_alarm_time:
+  name: Weekend Alarm Time
+  has_date: false
+  has_time: true
+  initial: '10:00'

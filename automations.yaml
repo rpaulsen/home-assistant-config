@@ -80,6 +80,8 @@
             media_player.kitchen_home
           {%-elif is_state("input_select.radio_player", "Bedroom") %}
             media_player.bedroom_speaker
+          {%-elif is_state("input_select.radio_player", "All") %}
+            media_player.apartment
           {% else %}
             "None"
           {% endif %}
@@ -98,6 +100,8 @@
             media_player.kitchen_home
           {%-elif is_state("input_select.radio_player", "Bedroom") %}
             media_player.bedroom_speaker
+          {%-elif is_state("input_select.radio_player", "All") %}
+            media_player.apartment
           {% else %}
             "None"
           {% endif %}
@@ -108,15 +112,17 @@
             https://prod-23-22-55-197.wostreaming.net/entercom-wstrfmaac-ibc1
           {%-elif is_state("input_select.radio_station", "99.7 - Q100") %}
             http://18763.live.streamtheworld.com/WWWQFMAAC.aac
+          {%-elif is_state("input_select.radio_station", "ESPN") %}  
+            http://edge.espn.cdn.abacast.net/espn-networkmp3-48
           {% else %}
             "None"
           {% endif %}
         media_content_type: 'audio/aac'
         
-- alias: Morning Alarm
+- alias: Weekday Alarm
   trigger:
-    - platform: time
-      at: '08:00:00'
+    - platform: template
+      value_template: '{{ states.sensor.time.state == states.sensor.weekday_alarm_time.state }}'
   condition:
     condition: time
     weekday:
@@ -125,6 +131,26 @@
       - wed
       - thu
       - fri
+  action:
+    - service: media_player.play_media
+      data:
+        entity_id: media_player.bedroom_speaker
+        media_content_id: http://18763.live.streamtheworld.com/WWWQFMAAC.aac
+        media_content_type: 'audio/aac'
+    - service: media_player.volume_set
+      data:
+        entity_id: media_player.bedroom_speaker
+        volume_level: 0.7
+        
+- alias: Weekend Alarm
+  trigger:
+    - platform: template
+      value_template: '{{ states.sensor.time.state == states.sensor.weekend_alarm_time.state }}'
+  condition:
+    condition: time
+    weekday:
+      - sat
+      - sun
   action:
     - service: media_player.play_media
       data:
