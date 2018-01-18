@@ -80,10 +80,11 @@ recorder:
 
 # Text to speech
 tts:
-  - platform: amazon_polly
+  - platform: amazon_polly_b
     aws_access_key_id: !secret poly_aws_access_key_id
     aws_secret_access_key: !secret poly_aws_secret_access_key
-    voice: Brian
+    voice: Matthew
+    text_type: ssml
   
 light:
   platform: hue

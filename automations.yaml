@@ -13,10 +13,26 @@
       - condition: template
         value_template: '{{ not is_state("device_tracker.ryan_pixel", "home")}}'  
   action:
-    - service: tts.amazon_polly_say
+    - service: media_player.volume_set
       data:
-        entity_id: media_player.kitchen_home
-        message: "Welcome home! I've turned the lights on for you."
+        entity_id: media_player.apartment
+        volume_level: 0.5
+    - service: tts.amazon_polly_b_say
+      data_template:
+        entity_id: media_player.apartment
+        message: >
+          <speak>
+            <prosody pitch='-20%'> 
+              <amazon:effect vocal-tract-length='+20%'> 
+                Welcome home!
+                {% if states.sun.sun.attributes.elevation < 3.5 %}
+                  It was pretty dark in here, so I turned on the lights.
+                {% endif %}
+                The current time is {{ now().strftime('%I:%M %p') }}.
+              </amazon:effect>
+            </prosody>
+          </speak>
+        cache: false
     - condition: numeric_state
       below: '3.5'
       entity_id: sun.sun
