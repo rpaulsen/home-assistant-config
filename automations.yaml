@@ -91,13 +91,13 @@
     data_template:
       entity_id: >
           {% if is_state("input_select.radio_player", "Living Room") %}
-            media_player.tv
-          {%-elif is_state("input_select.radio_player", "Kitchen") %}
-            media_player.kitchen_home
+            media_player.living_room_max
+          {%-elif is_state("input_select.radio_player", "Bathroom") %}
+            media_player.bathroom_speaker
           {%-elif is_state("input_select.radio_player", "Bedroom") %}
             media_player.bedroom_speaker
           {%-elif is_state("input_select.radio_player", "All") %}
-            media_player.apartment
+            media_player.apartment_music
           {% else %}
             "None"
           {% endif %}
@@ -111,13 +111,13 @@
       data_template:
         entity_id: >
           {% if is_state("input_select.radio_player", "Living Room") %}
-            media_player.tv
-          {%-elif is_state("input_select.radio_player", "Kitchen") %}
-            media_player.kitchen_home
+            media_player.living_room_max
+          {%-elif is_state("input_select.radio_player", "Bathroom") %}
+            media_player.bathroom_speaker
           {%-elif is_state("input_select.radio_player", "Bedroom") %}
             media_player.bedroom_speaker
           {%-elif is_state("input_select.radio_player", "All") %}
-            media_player.apartment
+            media_player.apartment_music
           {% else %}
             "None"
           {% endif %}
@@ -156,7 +156,7 @@
     - service: media_player.volume_set
       data:
         entity_id: media_player.bedroom_speaker
-        volume_level: 0.7
+        volume_level: 0.5
         
 - alias: Weekend Alarm
   trigger:
@@ -176,4 +176,4 @@
     - service: media_player.volume_set
       data:
         entity_id: media_player.bedroom_speaker
-        volume_level: 0.7
+        volume_level: 0.5

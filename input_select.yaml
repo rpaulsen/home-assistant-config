@@ -24,7 +24,7 @@ radio_player:
   name: Radio Player
   options:
     - Living Room 
-    - Kitchen 
+    - Bathroom 
     - Bedroom
     - All
     - "None"

@@ -8,7 +8,7 @@ default_view:
       - group.security
       - group.tracking
       - group.radio
-      - media_player.kitchen_home
+      - media_player.apartment_music
       - scene.normal_lighting
       - scene.blue_lighting
       - scene.red_lighting
@@ -60,16 +60,6 @@ radio:
     - input_select.radio_player
     - input_select.radio_station
 
-kitchen:
-   name: Kitchen
-   view: yes
-   entities:
-      - light.kitchen
-      - light.office
-      - media_player.kitchen_home
-      - scene.normal_lighting
-      - group.climate
-
 harmony:
   name: Home Theater
   entities:
@@ -88,6 +78,7 @@ living_room:
       - light.living_room
       - light.tv_backlight
       - media_player.tv
+      - media_player.living_room_max
       - group.harmony
       - sensor.harmony_activity
       - scene.normal_lighting
@@ -101,6 +92,7 @@ bedroom:
       - scene.bedtime_lighting
       - media_player.bedroom
       - media_player.bedroom_speaker
+      - media_player.bathroom_speaker
       - group.weekday_alarm
       - group.weekend_alarm
 
