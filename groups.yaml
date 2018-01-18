@@ -52,7 +52,7 @@ security:
   name: Security
   entities:
     - lock.front_door_locked
-    - sensor.front_door_batt
+    - sensor.front_door_open
 
 radio:
   name: Radio

@@ -72,6 +72,11 @@ recorder:
       - sensor.pws_weather_2d
       - sensor.weekday_alarm_time
       - sensor.weekend_alarm_time
+      - sensor.front_door_sensor_access_control
+      - sensor.front_door_sensor_alarm_level
+      - sensor.front_door_sensor_alarm_type
+      - sensor.front_door_sensor_burglar
+      - sensor.front_door_sensor_sourcenodeid
 
 # Text to speech
 tts:

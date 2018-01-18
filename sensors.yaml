@@ -18,13 +18,13 @@
     - temp_low_2d_f
 - platform: template
   sensors:
+    front_door_open:
+      friendly_name: 'Front Door'
+      value_template: '{% if is_state("sensor.front_door_sensor_access_control", "23") %}Closed{% else %}Open{% endif %}'
+      icon_template: '{% if is_state("sensor.front_door_sensor_access_control", "23") %}mdi:door-closed{% else %}mdi:door-open{% endif %}'
     harmony_activity:
       friendly_name: 'Current Activity'
       value_template: '{{ states.remote.living_room.attributes.current_activity }}'
-    front_door_batt:
-      friendly_name: 'Front Door'
-      value_template: '{{ states.zwave.front_door.attributes.battery_level }}'
-      unit_of_measurement: '%'
     weekday_alarm_time:
       friendly_name: 'Weekday Alarm Time'
       value_template: '{{ "%0.02d:%0.02d" | format(states.input_datetime.weekday_alarm_time.attributes.hour | int, states.input_datetime.weekday_alarm_time.attributes.minute | int) }}'

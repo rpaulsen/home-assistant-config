@@ -1,24 +1,24 @@
 - alias: 'Welcome Home'
   id: '1508212445583'
   trigger:
-    entity_id: lock.front_door_locked
-    from: locked
+    entity_id: sensor.front_door_open
+    from: Closed
     platform: state
-    to: unlocked
+    to: Open
   condition:
     condition: or
     conditions:
       - condition: template
-        value_template: '{{is_state("device_tracker.ryan_pixel", "home") and as_timestamp(now()) - as_timestamp(states.device_tracker.ryan_pixel.last_changed) < 1800}}'
+        value_template: '{{is_state("device_tracker.ryan_pixel", "home") and as_timestamp(now()) - as_timestamp(states.device_tracker.ryan_pixel.last_changed) < 900}}'
       - condition: template
         value_template: '{{ not is_state("device_tracker.ryan_pixel", "home")}}'  
   action:
     - service: tts.amazon_polly_say
       data:
         entity_id: media_player.kitchen_home
-        message: "Welcome home! I've turned the lights on for you and returned the environmental controls to normal."
+        message: "Welcome home! I've turned the lights on for you."
     - condition: numeric_state
-      below: '-2.5'
+      below: '3.5'
       entity_id: sun.sun
       value_template: '{{ state.attributes.elevation }}'
     - service: scene.turn_on
