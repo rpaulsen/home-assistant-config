@@ -45,7 +45,7 @@ bedroom_lights:
         
 office_lights:
   widget_type: light
-  entity: light.office
+  entity: light.hue_color_lamp_7
   title: Office
   icon_on: mdi-lightbulb
   icon_off: mdi-lightbulb-outline
@@ -53,12 +53,15 @@ office_lights:
     color_temp: 443
     brightness: 254
     
-fan:
-  widget_type: binary_sensor
-  entity: binary_sensor.kitchen_thermostat_fan
-  title: Nest Fan
-  icon_on: mdi-fan
-  icon_off: mdi-fan
+all_lights:
+  widget_type: light
+  entity: light.all
+  title: All
+  icon_on: mdi-lightbulb
+  icon_off: mdi-lightbulb-outline
+  on_attributes:
+    color_temp: 443
+    brightness: 254
   
 nest:
   widget_type: climate
@@ -66,6 +69,7 @@ nest:
   title: Nest
     
 layout:
-    - clock.clock(2x1), weatherunderground.weatherunderground(2x2), nest, fan
-    - living_room_lights, kitchen_lights, lock.front_door_locked, ryan_presence
+    - clock.clock(2x1), weatherunderground.weatherunderground(2x2), nest, ryan_presence
+    - living_room_lights, kitchen_lights, lock.front_door_locked, sensor.front_door_open
     - office_lights, bedroom_lights, scene.normal_lighting, scene.theater_lighting, scene.color_loop, scene.random_color
+    - all_lights
