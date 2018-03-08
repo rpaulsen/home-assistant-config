@@ -97,7 +97,7 @@ nest:
 remote:
  - platform: harmony
    name: Living Room
-   activity: 22853421
+   host: 192.168.1.213
    
 device_tracker:
  - platform: owntracks_http

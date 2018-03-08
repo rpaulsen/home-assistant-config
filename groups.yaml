@@ -29,10 +29,10 @@ all_lights_2:
    name: Lighting
    entities:
       - group.main_lights
+      - light.hue_bloom_1
+      - light.hue_color_lamp_7
+      - light.hue_lightstrip_plus_1
       - light.bedroom
-      - light.tv_backlight
-      - light.office
-      - light.hallway
       
 main_lights:
    name: Main Lights
@@ -70,13 +70,20 @@ tracking:
   name: Tracking
   entities:
     - device_tracker.ryan_pixel
+    
+living_room_lights:
+   name: Living Room
+   entities:
+      - light.lamp_1
+      - light.lamp_1
+      - light.lamp_2
 
 living_room:
    name: Living Room
    view: yes
    entities:
-      - light.living_room
-      - light.tv_backlight
+      - group.living_room_lights
+      - light.hue_lightstrip_plus_1
       - media_player.tv
       - media_player.living_room_max
       - group.harmony

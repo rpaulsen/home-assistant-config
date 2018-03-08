@@ -2,7 +2,7 @@ weekday_alarm_time:
   name: Weekday Alarm Time
   has_date: false
   has_time: true
-  initial: '08:00'
+  initial: '07:15'
 
 weekend_alarm_time:
   name: Weekend Alarm Time

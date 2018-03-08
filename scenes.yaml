@@ -1,16 +1,18 @@
  - name: Normal Lighting
    entities:
-      light.tv_backlight: off
+      light.hue_lightstrip_plus_1: off
       light.bedroom: off
-      light.office: off
+      light.hue_color_lamp_7: off
+      light.hue_bloom_1: off
       light.main:
          state: on
          color_temp: 443
          brightness: 254
  - name: Bedtime Lighting
    entities:
-      light.office: off
-      light.tv_backlight: off
+      light.hue_color_lamp_7: off
+      light.hue_lightstrip_plus_1: off
+      light.hue_bloom_1: off
       light.main: off
       light.bedroom:
          state: on
@@ -40,7 +42,9 @@
          effect: random
  - name: Theater Lighting
    entities:
-      light.office: off
+      light.hue_color_lamp_7: off
+      light.hue_lightstrip_plus_1: off
+      light.hue_bloom_1: off
       light.bedroom: off
       light.kitchen: off
       light.living_room:
