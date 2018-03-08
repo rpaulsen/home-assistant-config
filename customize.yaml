@@ -4,6 +4,12 @@ sensor.front_door_batt:
   icon: mdi:battery
 lock.front_door_locked:
   friendly_name: 'Front Door'
+sensor.kitchen_thermostat_temperature:
+  friendly_name: 'Indoor Temperature'
+sensor.kitchen_thermostat_humidity:
+  friendly_name: 'Indoor Humidity'
+sensor.kitchen_thermostat_hvac_state:
+  friendly_name: 'HVAC State'
 scripts.lock_door:
   google_assistant_name: 'Door Lock'
 
