@@ -3,7 +3,7 @@ appdaemon:
   disable_apps: 1
   plugins:
     HASS:
-      type: HASS
+      type: hass
       ha_url: !secret base_url
       ha_key: !secret http_password
 hadashboard:
