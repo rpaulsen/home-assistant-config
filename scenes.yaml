@@ -51,3 +51,9 @@
          state: on
          color_temp: 443
          brightness: 20
+ - name: Away
+   entities:
+     light.all: off
+     remote.living_room: off
+     climate.kitchen:
+       away_mode: on

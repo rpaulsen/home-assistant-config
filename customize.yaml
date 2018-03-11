@@ -12,7 +12,10 @@ sensor.kitchen_thermostat_hvac_state:
   friendly_name: 'HVAC State'
 scripts.lock_door:
   google_assistant_name: 'Door Lock'
-
+scripts.tv_off:
+  google_assistant_name: 'TV Off'
+scripts.tv_on:
+  google_assistant_name: 'TV On'
 # FRONT DOOR SENSOR
 binary_sensor.front_door_sensor_sensor:
   hidden: true

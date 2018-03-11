@@ -2,3 +2,11 @@ lock_door:
   sequence:
     - service: lock.lock
       entity_id: lock.front_door_locked
+tv_off:
+  sequence:
+    - service: remote.turn_off
+      entity_id: remote.living_room
+tv_on:
+  sequence:
+    - service: remote.turn_on
+      entity_id: remote.living_room
