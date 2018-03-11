@@ -70,6 +70,6 @@ nest:
     
 layout:
     - clock.clock(2x1), weatherunderground.weatherunderground(2x2), nest, ryan_presence
-    - living_room_lights, kitchen_lights, lock.front_door_locked, sensor.front_door_open
+    - living_room_lights, kitchen_lights, lock.front_door_locked, binary_sensor.front_door_open
     - office_lights, bedroom_lights, scene.normal_lighting, scene.theater_lighting, scene.color_loop, scene.random_color
     - all_lights

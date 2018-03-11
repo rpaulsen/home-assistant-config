@@ -1,10 +1,10 @@
 - alias: 'Welcome Home'
   id: '1508212445583'
   trigger:
-    entity_id: sensor.front_door_open
-    from: Closed
+    entity_id: binary_sensor.front_door_open
+    from: off
     platform: state
-    to: Open
+    to: on
   condition:
     condition: or
     conditions:

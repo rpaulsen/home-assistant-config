@@ -15,7 +15,7 @@ default_view:
       - sensor.kitchen_thermostat_temperature
       - sensor.kitchen_thermostat_humidity
       - sensor.kitchen_thermostat_hvac_state
-      - sensor.front_door_open
+      - binary_sensor.front_door_open
       - device_tracker.ryan_pixel
       - climate.kitchen
       - lock.front_door_locked
