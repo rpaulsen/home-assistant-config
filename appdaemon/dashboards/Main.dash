@@ -77,6 +77,6 @@ front_door:
     
 layout:
     - clock.clock(2x1), weatherunderground.weatherunderground(2x2), nest, ryan_presence
-    - living_room_lights, kitchen_lights, lock.front_door_locked, front_door
+    - living_room_lights, kitchen_lights, lock.locked, front_door
     - office_lights, bedroom_lights, scene.normal_lighting, scene.theater_lighting, media_player.apartment_music(2x2)
     - all_lights, scene.away, scene.color_loop, scene.random_color

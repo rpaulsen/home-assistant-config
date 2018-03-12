@@ -111,11 +111,12 @@ recorder:
       - sensor.pws_weather_2d
       - sensor.weekday_alarm_time
       - sensor.weekend_alarm_time
-      - sensor.front_door_sensor_access_control
-      - sensor.front_door_sensor_alarm_level
-      - sensor.front_door_sensor_alarm_type
-      - sensor.front_door_sensor_burglar
-      - sensor.front_door_sensor_sourcenodeid
+      - sensor.hank_hkzwdws01_doorwindow_sensor_access_control_2
+      - binary_sensor.hank_hkzwdws01_doorwindow_sensor_sensor_2
+      - sensor.alarm_type_3
+      - sensor.alarm_level_3
+      - sensor.hank_hkzwdws01_doorwindow_sensor_burglar_2
+      - sensor.hank_hkzwdws01_doorwindow_sensor_sourcenodeid_2
 
 # Text to speech
 tts:

@@ -1,7 +1,7 @@
 lock_door:
   sequence:
     - service: lock.lock
-      entity_id: lock.front_door_locked
+      entity_id: lock.locked
 tv_off:
   sequence:
     - service: remote.turn_off

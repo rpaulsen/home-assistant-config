@@ -18,7 +18,7 @@ default_view:
       - binary_sensor.front_door_open
       - device_tracker.ryan_pixel
       - climate.kitchen
-      - lock.front_door_locked
+      - lock.locked
       - group.radio
       - media_player.apartment_music
       - scene.normal_lighting
